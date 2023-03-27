@@ -1,4 +1,5 @@
 lista_folha = None
+
 def heapify(seq, n, i):
     largest = i
     l = 2 * i + 1
@@ -41,5 +42,7 @@ def jogo(seq, constante):
 
 seq = list(map(int, input().split()))
 constante = int(input())
+
 rodadas = jogo(seq, constante)
+
 print(f"{rodadas} rodadas, partindo para a próxima!")
