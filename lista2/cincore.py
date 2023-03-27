@@ -7,7 +7,7 @@ class Arvore:
 def busca_recursiva(no, chave):
     if no is None:
         print(f'{chave} nao foi encontrado na arvore')
-        returnz
+        return
     if no.chave == chave:
         print(f'{chave} foi encontrado na arvore')
         return no
