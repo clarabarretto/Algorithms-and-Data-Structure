@@ -1,5 +1,6 @@
 lista_folha = None
 
+
 def heapify(seq, n, i):
     largest = i
     l = 2 * i + 1
@@ -12,6 +13,7 @@ def heapify(seq, n, i):
         seq[i], seq[largest] = seq[largest], seq[i]
         heapify(seq, n, largest)
 
+
 def heapSort(seq):
     global lista_folha
     n = len(seq)
@@ -19,12 +21,14 @@ def heapSort(seq):
     for i in range(lista_folha - 1, -1, -1):
         heapify(seq, n, i)
 
+
 def minimo(seq, f):
-  find = seq[f]
-  for i in range(f, len(seq)):
-    if seq[i] < find:
-      find = seq[i]
-  return find
+    find = seq[f]
+    for i in range(f, len(seq)):
+        if seq[i] < find:
+            find = seq[i]
+    return find
+
 
 def jogo(seq, constante):
     heapSort(seq)
@@ -39,6 +43,7 @@ def jogo(seq, constante):
         heapSort(seq)
         rodadas += 1
     return rodadas
+
 
 seq = list(map(int, input().split()))
 constante = int(input())
